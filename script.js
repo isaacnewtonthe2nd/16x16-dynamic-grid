@@ -12,10 +12,13 @@ function generateGrid (dimensions) {
   let divsHeightWidth = (960 / dimensions) - 2;
 
   for (let i = 0; i < sumOfDivs; i++) {
+    let howOpaque = 0;
     const divSquare = document.createElement("div");
     divSquare.style.cssText = `border: 1px solid black; width: ${divsHeightWidth}px; height: ${divsHeightWidth}px;`;
     divSquare.addEventListener("mouseenter", () => {
       gridColors(divSquare);
+      howOpaque += 0.1;
+      divSquare.style.opacity = `${howOpaque}`;
     });
     container.appendChild(divSquare);
   }
