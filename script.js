@@ -9,7 +9,9 @@ btn.addEventListener("click", () => {
 
 function generateGrid (dimensions) {
   let sumOfDivs = dimensions ** 2;
-  let divsHeightWidth = (960 / dimensions) - 2;
+  let divsHeightWidth = Math.round((960 / dimensions));
+
+  container.textContent = "";
 
   for (let i = 0; i < sumOfDivs; i++) {
     let howOpaque = 0;
