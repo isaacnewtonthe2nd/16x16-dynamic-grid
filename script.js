@@ -9,7 +9,7 @@ btn.addEventListener("click", () => {
 
 function generateGrid (dimensions) {
   let sumOfDivs = dimensions ** 2;
-  let divsHeightWidth = Math.round((960 / dimensions));
+  let divsHeightWidth = (960 / dimensions);
 
   container.textContent = "";
 
